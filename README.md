@@ -13,3 +13,4 @@
  - mais
     - https://github.com/WebBluetoothCG/demos
     - https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md
+   - https://blog.apiki.com/web-app-manifest/

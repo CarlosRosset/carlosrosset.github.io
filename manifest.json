@@ -2,6 +2,10 @@
     "name": "CarlosRosset",
     "description": "Pagina pessoal para testes",
     "launch_path": "/index.html",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#3E4EB8",
+    "theme_color": "#2F3BA2",
     "ícones": {
         "512": "/img/icon-512x512.png",
         "128": "/img/icon-128x128.png"

@@ -10,3 +10,4 @@ function teste_01() {
     // fale('Tentando ');
     console.log('teste');
 }
+
