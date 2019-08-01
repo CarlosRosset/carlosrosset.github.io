@@ -3,8 +3,8 @@
     "description": "Pagina pessoal para testes",
     "launch_path": "/index.html",
     "ícones": {
-        "512": "/img/icon-512.png",
-        "128": "/img/icon-128.png"
+        "512": "/img/icon-512x512.png",
+        "128": "/img/icon-128x128.png"
     },
     "desenvolvedor": {
         "nome": "Carlos Rosset",
