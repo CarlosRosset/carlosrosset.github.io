@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Blue2 Demo</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://code.getmdl.io/1.3.0/material.grey-light_blue.min.css" rel="stylesheet" />
+  <link href="css/app.css" rel="stylesheet" />
+  <link href="favicon.png?v=blue2-v1" id="favicon" rel="shortcut icon" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript" defer></script>
+  <script src="https://code.getmdl.io/1.3.0/material.min.js" type="text/javascript" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript" defer></script>
+
+  <script src="js/ble-utils.js" type="text/javascript" defer></script>
+  <script src="js/blue2-ca.js" type="text/javascript" defer></script>
+  <script src="js/events.js" type="text/javascript" defer></script>
+  <script src="js/app.js" type="text/javascript" defer></script>
+  <script src="js/index.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <img id="blue2icon" src="media/blue2-icon100x100.png" />
+    <span class="mdl-typography--headline">Blue2 Bluetooth Demo</span>
+    <br />
+    <br />
+    <!-- <div class="mdl-typography--title">Blue2 Temperature Sensor Browser Demo</div> -->
+    <br />Press the test button below.
+    <br />The browser should ask to pick/pair the device
+    <br />Press the button on the Blue2 device
+    <br />You should see Blue2 appear in the popup menu.
+    <br />Pick Blue2 from the pair menu.
+    <br />If you see any errors try again.
+    <br /><br />
+    <button id="test" class="mdl-button mdl-js-button mdl-button--raised">Test</button>
+    <br /><br />
+    <!--
+    <button id="readBatteryLevel" class="mdl-button mdl-js-button mdl-button--raised">Read Bluetooth Device's Battery Level</button>
+    <br /><br />
+    <button id="startNotifications" class="mdl-button mdl-js-button mdl-button--raised" disabled>Start Notifications</button>
+    <br /><br />
+    <button id="stopNotifications" class="mdl-button mdl-js-button mdl-button--raised" disabled>Stop Notifications</button>
+    <br /><br />
+    <button id="reset" class="mdl-button mdl-js-button mdl-button--raised">Reset Bluetooth Device</button>
+    <br />
+    <br />
+    -->
+    <br />
+    <div id="logwrapper">
+      <div class="log logtemplate"></div>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
