@@ -1,5 +1,6 @@
 {
     "name": "CarlosRosset",
+    "short_name": "CarlosRosset",
     "description": "Pagina pessoal para testes",
     "launch_path": "/index.html",
     "start_url": "/index.html",
