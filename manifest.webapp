@@ -1,0 +1,26 @@
+{
+    "name": "CarlosRosset",
+    "description": "Pagina pessoal para testes",
+    "launch_path": "/index.html",
+    "ícones": {
+        "512": "/img/icon-512.png",
+        "128": "/img/icon-128.png"
+    },
+    "desenvolvedor": {
+        "nome": "Carlos Rosset",
+        "url": "https://www.carlosrosset.com.br"
+    },
+    "default_locale": "pt-BR",
+    "chrome": {
+        "navigation": true
+    },
+    "type": "privileged",
+    "permissions": {
+        "audio-capture": {
+            "description": "Audio capture"
+        },
+        "speech-recognition": {
+            "description": "Speech recognition"
+        }
+    }
+}
