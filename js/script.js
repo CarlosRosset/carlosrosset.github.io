@@ -7,12 +7,6 @@ function fale(mensagem) {
 };
 
 function teste_01() {
-    // fale('Tentando ');
-    console.log('teste 01');
-    navigator.bluetooth.requestDevice();
-}
-
-function teste_02() {
     // Define um elemento de Saida para as mensagens
     var $target = document.getElementById('msgsaida');
 
@@ -22,9 +16,12 @@ function teste_02() {
         return;
     }
     // Se não tem suporte jamais chegará neste ponto defido ao "return"
-
-    console.log('teste 02');
+   
     navigator.bluetooth.requestDevice();
+}
+
+function teste_02() {
+    console.log('teste 02');
 }
 
 function forceResetApp() {
