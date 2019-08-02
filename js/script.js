@@ -86,5 +86,5 @@ function forceResetApp() {
             });
 
         $objlog.innerText = log;  
-        console.log('funcionou tudo 2');
+        console.log('funcionou tudo');
     }
