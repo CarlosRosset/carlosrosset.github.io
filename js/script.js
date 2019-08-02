@@ -68,18 +68,23 @@ function forceResetApp() {
             options.filters = filters;
         }
 
-        console.log('Requesting Bluetooth Device...');
-        console.log('with ' + JSON.stringify(options));
+        var $objlog = document.getElementById('log');
+        let log = '';
+        
+
+        log = log + "<ion-item><ion-label>Requesting Bluetooth Device...</ion-label></ion-item>";
+        log = log + "<ion-item><ion-label>with "+ JSON.stringify(options) +"</ion-label></ion-item>";
+
         navigator.bluetooth.requestDevice(options)
             .then(device => {
-                document.getElementById('name').innerHTML = ('> Name:             ' + device.name);
-                document.getElementById('service').innerHTML = ('> Id:               ' + device.id);
-                document.getElementById('namePrefix').innerHTML = ('> Connected:        ' + device.gatt.connected);
+                log = log + "<ion-item><ion-label>Name: "+ device.name +"</ion-label></ion-item>";
+                log = log + "<ion-item><ion-label>Id: "+ device.id +"</ion-label></ion-item>";
+                log = log + "<ion-item><ion-label>Connected: "+ device.gatt.connected +"</ion-label></ion-item>";
             })
             .catch(error => {
-                document.getElementById('name').innerHTML = ('Argh! ' + error);
+                log = log + "<ion-item><ion-label>Argh! " + error +"</ion-label></ion-item>";
             });
 
-            
-           console.log('funcionou tudo 2');
+        $objlog.innerText = log;  
+        console.log('funcionou tudo 2');
     }
