@@ -7,12 +7,24 @@ function bluetooth() {
        
     navigator.bluetooth.requestDevice(options)
         .then(device =>  {
-            if (!device.gatt.connect()) {
-                return device.gatt.connect()
+            const isConectado = device.gatt.connected;
+            if (!isConectado){
+                // tentar conectar
+                retorno.innerHTML = 'Tentar conectar';
+            } else {
+                // Esta já conectado
+                retorno.innerHTML = 'Já conectado';
             }
-            else {
-                console.log('Teste')
-            }
+
+
+            // if (!device.gatt.connect()) {
+            //     console.log('Device não conectado');
+            //     return device.gatt.connect();
+            //     console.log('Conectado');
+            // }
+            // else {
+            //     console.log('Teste')
+            // }
         //    retorno.innerHTML = " device ", device;
         //    retorno.innerHTML += " Name: " + device.name + "<br>";
         //    retorno.innerHTML += " Id: " + device.id + "<br>";
