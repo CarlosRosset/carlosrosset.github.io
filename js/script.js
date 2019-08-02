@@ -56,32 +56,34 @@ function testarBluetooth() {
     } */
     // Se não tem suporte jamais chegará neste ponto defido ao "return"
 
-    let filters = [];
+    // let filters = [];
 
-    let filterService = document.getElementById('service').value;
-    if (filterService.startsWith('0x')) {
-        filterService = parseInt(filterService);
-    }
-    if (filterService) {
-        filters.push({ services: [filterService] });
-    }
+    // let filterService = document.getElementById("service").value;
+    // if (filterService.startsWith('0x')) {
+    //     filterService = parseInt(filterService);
+    // }
+    // if (filterService) {
+    //     filters.push({ services: [filterService] });
+    // }
 
-    let filterName = document.getElementById('name').value;
-    if (filterName) {
-        filters.push({ name: filterName });
-    }
+    // let filterName = document.getElementById("name").value;
+    // if (filterName) {
+    //     filters.push({ name: filterName });
+    // }
 
-    let filterNamePrefix = document.getElementById('namePrefix').value;
-    if (filterNamePrefix) {
-        filters.push({ namePrefix: filterNamePrefix });
-    }
+    // let filterNamePrefix = document.getElementById("namePrefix").value;
+    // if (filterNamePrefix) {
+    //     filters.push({ namePrefix: filterNamePrefix });
+    // }
 
     let options = {};
-    if (document.getElementById('allDevices').checked) {
-        options.acceptAllDevices = true;
-    } else {
-        options.filters = filters;
-    }
+    options.acceptAllDevices = true;
+
+    // if (document.getElementById('allDevices').checked) {
+    //     options.acceptAllDevices = true;
+    // } else {
+    //     options.filters = filters;
+    // }
 
 
     log = log + "Requesting Bluetooth Device... " + "\n";
@@ -91,18 +93,18 @@ function testarBluetooth() {
     // let deviceOptions = JSON.stringify(device);
 
     console.log('funcionou tudo');
-    console.log('filters ', filters);
-    console.log('filterService ', filterService);
-    console.log('filterName ', filterName);
-    console.log('filterNamePrefix ', filterNamePrefix);
-    console.log('options ', options);
-    console.log('device ', device);
+    // console.log('filters ', filters);
+    // console.log('filterService ', filterService);
+    // console.log('filterName ', filterName);
+    // console.log('filterNamePrefix ', filterNamePrefix);
+    // console.log('options ', options);
     // console.log('stringOptions ', stringOptions);
     // console.log('deviceOptions ', deviceOptions);
     
        
     navigator.bluetooth.requestDevice(options)
         .then(device => {
+            console.log('device ', device);
             log = log + "Name: " + device.name + "\n";
             log = log + "Id: " + device.id + "\n";
             log = log + "Connected: " + device.gatt.connected + "\n";
