@@ -43,15 +43,15 @@ function forceResetApp() {
 function testarBluetooth() {
 
     // Define um elemento de Saida para as mensagens
-    var $target = document.getElementById('msgsaida');
+    // var $target = document.getElementById('msgsaida');
     var $objlog = document.getElementById('log');
     var log;
 
     // Testa se existe suporte "bluetooth" no "navigator"
-    if (!('bluetooth' in navigator)) {
+ /*   if (!('bluetooth' in navigator)) {
         $target.innerText = 'API Bluetooth - SEM Suporte.';
-        return;
-    }
+        return; 
+    } */
     // Se não tem suporte jamais chegará neste ponto defido ao "return"
 
     let filters = [];
@@ -96,5 +96,11 @@ function testarBluetooth() {
         });
 
     $objlog.innerText = log;
-    console.log('funcionou tudo');
+
+    let bluetoothTeste = document.getElementById('bluetoothConsoles');
+    bluetoothTeste.value.innerText = filters + filterService;
+    console.log(filterName);
+    console.log(filterNamePrefix);
+    console.log(options);
+    console.log(device)
 }
