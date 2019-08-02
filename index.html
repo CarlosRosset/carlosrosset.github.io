@@ -19,11 +19,11 @@
         <h1>Peço que entenda que sem o Javascript ativo teremos dificuldades em lhe atender bem!</h1>
     </noscript>
     <!-- para evitar instalação: https://unpkg.com/browse/@ionic/core@4.0.0/README.md -->
-    <!-- <link href="https://unpkg.com/@ionic/core@4.0.0/css/ionic.bundle.css" rel="stylesheet"> -->
-    <!-- <script src="https://unpkg.com/@ionic/core@4.0.0/dist/ionic.js"></script> -->
+    <link href="https://unpkg.com/@ionic/core@4.0.0/css/ionic.bundle.css" rel="stylesheet">
+    <script src="https://unpkg.com/@ionic/core@4.0.0/dist/ionic.js"></script>
 
-    <link href="no/i400/css/ionic.bundle.css" rel="stylesheet">
-    <script src="no/i400/dist/ionic.js"></script>
+    <!-- <link href="no/i400/css/ionic.bundle.css" rel="stylesheet"> -->
+    <!-- <script src="no/i400/dist/ionic.js"></script> -->
 
 </head>
 
@@ -59,6 +59,7 @@
 
                 <ion-item href="./web-bluetooth-demo2/index.html">
                         <ion-label>Aplicação de terceiro - Bluetooh</ion-label>
+                        <ion-checkbox></ion-checkbox>
                 </ion-item>
 
                 <ion-item onclick="teste_01()" >
@@ -75,6 +76,33 @@
                   Esteja certo que muita coisa vai dar <strong>ERRADO</strong> e talvez com muita sorte algo possa dar certo.
                 </ion-card-content>
               </ion-card>
+
+
+                <ion-card>
+                    <ion-label>Vários testes</ion-label>
+
+                    <ion-item>
+                        <ion-label></ion-label>
+                        <ion-checkbox></ion-checkbox>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label></ion-label>
+                        <ion-input type="text" placeholder="Input 1"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label></ion-label>
+                        <ion-input type="text" placeholder="Input 2"></ion-input>
+                    </ion-item>
+                    
+                    <ion-item>
+                        <ion-label></ion-label>
+                        <ion-input type="text" placeholder="Input 3"></ion-input>
+                    </ion-item>
+
+                    <ion-button (click)="testarBluetooth()">Testar Bluetooth</ion-button>
+                </ion-card>
 
         </ion-content>
 
