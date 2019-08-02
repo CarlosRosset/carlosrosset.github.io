@@ -99,15 +99,17 @@ function testarBluetooth() {
 
     $objlog.innerText = log;
 
-    let stringOptions = JSON.stringify(options)
-    
+    let stringOptions = JSON.stringify(options);
+    let deviceOptions = JSON.stringify(device);
+        
     console.log('funcionou tudo');
     console.log('filters ', filters);
     console.log('filterService ', filterService);
     console.log('filterName ', filterName);
     console.log('filterNamePrefix ', filterNamePrefix);
     console.log('options ', options);
-    console.log('device ', device)
-    console.log('stringOptions ', stringOptions)
+    console.log('device ', device);
+    console.log('stringOptions ', stringOptions);
+    console.log('devicegOptions ', deviceOptions);
     
 }
