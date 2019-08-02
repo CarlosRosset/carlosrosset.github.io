@@ -16,7 +16,7 @@ function teste_01() {
         return;
     }
     // Se não tem suporte jamais chegará neste ponto defido ao "return"
-   
+
     navigator.bluetooth.requestDevice();
 }
 
@@ -37,44 +37,46 @@ function forceResetApp() {
     })
     //----
 
+
+}
+
     function testarBluetooth() {
         let filters = [];
-      
+
         let filterService = document.getElementById('service').value;
         if (filterService.startsWith('0x')) {
-          filterService = parseInt(filterService);
+            filterService = parseInt(filterService);
         }
         if (filterService) {
-          filters.push({services: [filterService]});
+            filters.push({ services: [filterService] });
         }
-      
+
         let filterName = document.getElementById('name').value;
         if (filterName) {
-          filters.push({name: filterName});
+            filters.push({ name: filterName });
         }
-      
+
         let filterNamePrefix = document.getElementById('namePrefix').value;
         if (filterNamePrefix) {
-          filters.push({namePrefix: filterNamePrefix});
+            filters.push({ namePrefix: filterNamePrefix });
         }
-      
+
         let options = {};
         if (document.getElementById('allDevices').checked) {
-          options.acceptAllDevices = true;
+            options.acceptAllDevices = true;
         } else {
-          options.filters = filters;
+            options.filters = filters;
         }
-      
+
         log('Requesting Bluetooth Device...');
         log('with ' + JSON.stringify(options));
         navigator.bluetooth.requestDevice(options)
-        .then(device => {
-          log('> Name:             ' + device.name);
-          log('> Id:               ' + device.id);
-          log('> Connected:        ' + device.gatt.connected);
-        })
-        .catch(error => {
-          log('Argh! ' + error);
-        });
-      }
-}
+            .then(device => {
+                log('> Name:             ' + device.name);
+                log('> Id:               ' + device.id);
+                log('> Connected:        ' + device.gatt.connected);
+            })
+            .catch(error => {
+                log('Argh! ' + error);
+            });
+    }
