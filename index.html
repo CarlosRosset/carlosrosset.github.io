@@ -58,7 +58,7 @@
                 </ion-item> -->
 
                 <ion-item href="./web-bluetooth-demo2/index.html">
-                        <ion-label>Aplicação de terceiro - Bluetooh</ion-label>
+                        <ion-label>Aplicação de terceiro - Bluetooh </ion-label>
                         <ion-checkbox></ion-checkbox>
                 </ion-item>
 
@@ -78,27 +78,27 @@
               </ion-card>
 
 
-                <ion-card>
+                <ion-card id="card_bluetooth" >
                     <ion-label>Vários testes</ion-label>
 
                     <ion-item>
                         <ion-label></ion-label>
-                        <ion-checkbox></ion-checkbox>
+                        <ion-checkbox id="allDevices"></ion-checkbox>
                     </ion-item>
 
                     <ion-item>
                         <ion-label></ion-label>
-                        <ion-input type="text" placeholder="Input 1"></ion-input>
+                        <ion-input id="service" type="text" placeholder="services"></ion-input>
                     </ion-item>
 
                     <ion-item>
                         <ion-label></ion-label>
-                        <ion-input type="text" placeholder="Input 2"></ion-input>
+                        <ion-input id="name" type="text" placeholder="Device Name"></ion-input>
                     </ion-item>
                     
                     <ion-item>
                         <ion-label></ion-label>
-                        <ion-input type="text" placeholder="Input 3"></ion-input>
+                        <ion-input id="namePrefix" type="text" placeholder="Device Name Prefix" ></ion-input>
                     </ion-item>
 
                     <ion-button (click)="testarBluetooth()">Testar Bluetooth</ion-button>
