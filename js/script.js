@@ -90,8 +90,8 @@ function testarBluetooth() {
     console.log('stringOptions ', stringOptions);
     console.log('deviceOptions ', deviceOptions);
 
-    let stringOptions = JSON.stringify(options);
-    let deviceOptions = JSON.stringify(device);
+    // let stringOptions = JSON.stringify(options);
+    // let deviceOptions = JSON.stringify(device);
 
     console.log('funcionou tudo');
     console.log('filters ', filters);
@@ -100,8 +100,8 @@ function testarBluetooth() {
     console.log('filterNamePrefix ', filterNamePrefix);
     console.log('options ', options);
     console.log('device ', device);
-    console.log('stringOptions ', stringOptions);
-    console.log('deviceOptions ', deviceOptions);
+    // console.log('stringOptions ', stringOptions);
+    // console.log('deviceOptions ', deviceOptions);
     
        
     navigator.bluetooth.requestDevice(options)
