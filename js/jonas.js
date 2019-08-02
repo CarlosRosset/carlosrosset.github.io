@@ -7,13 +7,13 @@ function bluetooth() {
        
     navigator.bluetooth.requestDevice(options)
         .then(device => {
-            retorno = " device ", device;
-            retorno += " Name: " + device.name + "\n";
-            retorno += " Id: " + device.id + "\n";
-            retorno += " Connected: " + device.gatt.connected + "\n";
+            retorno.innerHTML = " device ", device;
+            retorno.innerHTML += " Name: " + device.name + "\n";
+            retorno.innerHTML += " Id: " + device.id + "\n";
+            retorno.innerHTML += " Connected: " + device.gatt.connected + "\n";
         })
         .catch(error => {
-            retorno += " Argh! " + error + "\n";
+            retorno.innerHTML += " Argh! " + error + "\n";
         });
 
     console.log('fim');
