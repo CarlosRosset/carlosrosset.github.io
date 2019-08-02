@@ -72,17 +72,17 @@ function forceResetApp() {
         let log = '';
         
 
-        log = log + "<ion-item><ion-label>Requesting Bluetooth Device...</ion-label></ion-item>";
-        log = log + "<ion-item><ion-label>with "+ JSON.stringify(options) +"</ion-label></ion-item>";
+        log = log + "Requesting Bluetooth Device... " + "<br>";
+        log = log + "With: " + JSON.stringify(options) +"<br>";
 
         navigator.bluetooth.requestDevice(options)
             .then(device => {
-                log = log + "<ion-item><ion-label>Name: "+ device.name +"</ion-label></ion-item>";
-                log = log + "<ion-item><ion-label>Id: "+ device.id +"</ion-label></ion-item>";
-                log = log + "<ion-item><ion-label>Connected: "+ device.gatt.connected +"</ion-label></ion-item>";
+                log = log + "Name: "+ device.name +"<br>";
+                log = log + "Id: "+ device.id +"<br>";
+                log = log + "Connected: "+ device.gatt.connected +"<br>";
             })
             .catch(error => {
-                log = log + "<ion-item><ion-label>Argh! " + error +"</ion-label></ion-item>";
+                log = log + "Argh! " + error +"<br>";
             });
 
         $objlog.innerText = log;  
