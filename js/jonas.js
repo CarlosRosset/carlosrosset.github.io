@@ -1,11 +1,10 @@
 function testarBluetooth(){
     let retorno = document.getElementById('retorno');
     retorno.innerHTML = "valor inicial"
-    navigator.bluetooth.requestDevice(options).then(function(device) {
-        retorno.innerHTML = 'Name: ', device.name;
-        // Do something with the device.
+    navigator.bluetooth.requestDevice({
+        acceptAllDevices: true,
+        optionalServices: ['battery_service']
       })
-      .catch(function(error) {
-        retorno.innerHTML = "Something went wrong. " + error;
-      });
+      .then(device => { retorno.innerHTML = 'Oi' + device })
+      .catch(error => { retorno.innerHTML = error; });
 }
