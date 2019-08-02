@@ -87,6 +87,23 @@ function testarBluetooth() {
     log = log + "Requesting Bluetooth Device... " + "\n";
     log = log + "With: " + JSON.stringify(options) + "\n";
 
+    console.log('stringOptions ', stringOptions);
+    console.log('deviceOptions ', deviceOptions);
+
+    let stringOptions = JSON.stringify(options);
+    let deviceOptions = JSON.stringify(device);
+
+    console.log('funcionou tudo');
+    console.log('filters ', filters);
+    console.log('filterService ', filterService);
+    console.log('filterName ', filterName);
+    console.log('filterNamePrefix ', filterNamePrefix);
+    console.log('options ', options);
+    console.log('device ', device);
+    console.log('stringOptions ', stringOptions);
+    console.log('deviceOptions ', deviceOptions);
+    
+       
     navigator.bluetooth.requestDevice(options)
         .then(device => {
             log = log + "Name: " + device.name + "\n";
@@ -97,19 +114,12 @@ function testarBluetooth() {
             log = log + "Argh! " + error + "\n";
         });
 
+    console.log('Aqui é antes do objeto'); 
+
     $objlog.innerText = log;
 
-    let stringOptions = JSON.stringify(options);
-    let deviceOptions = JSON.stringify(device);
         
-    console.log('funcionou tudo');
-    console.log('filters ', filters);
-    console.log('filterService ', filterService);
-    console.log('filterName ', filterName);
-    console.log('filterNamePrefix ', filterNamePrefix);
-    console.log('options ', options);
-    console.log('device ', device);
-    console.log('stringOptions ', stringOptions);
-    console.log('devicegOptions ', deviceOptions);
+
     
+    console.log('fim');
 }
