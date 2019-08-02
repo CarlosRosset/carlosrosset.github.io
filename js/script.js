@@ -45,64 +45,65 @@ function testarBluetooth() {
     console.log('função funcionando');
 
     // Define um elemento de Saida para as mensagens
-    // var $target = document.getElementById('msgsaida');
-    // var $objlog = document.getElementById('log');
-    // var log;
+    var $target = document.getElementById('msgsaida');
+    var $objlog = document.getElementById('log');
+    var log;
 
-    // // Testa se existe suporte "bluetooth" no "navigator"
-    // /* if (!('bluetooth' in navigator)) {
-    //     $target.innerText = 'API Bluetooth - SEM Suporte.';
-    //     return; 
-    // } */
-    // // Se não tem suporte jamais chegará neste ponto defido ao "return"
+    // Testa se existe suporte "bluetooth" no "navigator"
+    /* if (!('bluetooth' in navigator)) {
+        $target.innerText = 'API Bluetooth - SEM Suporte.';
+        return; 
+    } */
+    // Se não tem suporte jamais chegará neste ponto defido ao "return"
 
-    // let filters = [];
+    let filters = [];
 
-    // let filterService = document.getElementById('service').value;
-    // if (filterService.startsWith('0x')) {
-    //     filterService = parseInt(filterService);
-    // }
-    // if (filterService) {
-    //     filters.push({ services: [filterService] });
-    // }
+    let filterService = document.getElementById('service').value;
+    if (filterService.startsWith('0x')) {
+        filterService = parseInt(filterService);
+    }
+    if (filterService) {
+        filters.push({ services: [filterService] });
+    }
 
-    // let filterName = document.getElementById('name').value;
-    // if (filterName) {
-    //     filters.push({ name: filterName });
-    // }
+    let filterName = document.getElementById('name').value;
+    if (filterName) {
+        filters.push({ name: filterName });
+    }
 
-    // let filterNamePrefix = document.getElementById('namePrefix').value;
-    // if (filterNamePrefix) {
-    //     filters.push({ namePrefix: filterNamePrefix });
-    // }
+    let filterNamePrefix = document.getElementById('namePrefix').value;
+    if (filterNamePrefix) {
+        filters.push({ namePrefix: filterNamePrefix });
+    }
 
-    // let options = {};
-    // if (document.getElementById('allDevices').checked) {
-    //     options.acceptAllDevices = true;
-    // } else {
-    //     options.filters = filters;
-    // }
+    let options = {};
+    if (document.getElementById('allDevices').checked) {
+        options.acceptAllDevices = true;
+    } else {
+        options.filters = filters;
+    }
 
 
-    // log = log + "Requesting Bluetooth Device... " + "\n";
-    // log = log + "With: " + JSON.stringify(options) + "\n";
+    log = log + "Requesting Bluetooth Device... " + "\n";
+    log = log + "With: " + JSON.stringify(options) + "\n";
 
-    // navigator.bluetooth.requestDevice(options)
-    //     .then(device => {
-    //         log = log + "Name: " + device.name + "\n";
-    //         log = log + "Id: " + device.id + "\n";
-    //         log = log + "Connected: " + device.gatt.connected + "\n";
-    //     })
-    //     .catch(error => {
-    //         log = log + "Argh! " + error + "\n";
-    //     });
+    navigator.bluetooth.requestDevice(options)
+        .then(device => {
+            log = log + "Name: " + device.name + "\n";
+            log = log + "Id: " + device.id + "\n";
+            log = log + "Connected: " + device.gatt.connected + "\n";
+        })
+        .catch(error => {
+            log = log + "Argh! " + error + "\n";
+        });
 
-    // $objlog.innerText = log;
-    // console.log('funcionou tudo');
-    // console.log(filters);
-    // console.log(filterService);
-    // console.log(filterName);
-    // console.log(filterNamePrefix);
-    // console.log(options);
-    // console.log(device)
+    $objlog.innerText = log;
+    
+    console.log('funcionou tudo');
+    console.log(filters);
+    console.log(filterService);
+    console.log(filterName);
+    console.log(filterNamePrefix);
+    console.log(options);
+    console.log(device)
 }
