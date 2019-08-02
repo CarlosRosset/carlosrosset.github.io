@@ -69,20 +69,20 @@ function forceResetApp() {
         }
 
         var $objlog = document.getElementById('log');
-        let log;
+        var log;
         
 
-        log = log + "Requesting Bluetooth Device... " + "<br>";
-        log = log + "With: " + JSON.stringify(options) +"<br>";
+        log = log + "Requesting Bluetooth Device... " + "/n";
+        log = log + "With: " + JSON.stringify(options) +"/n";
 
         navigator.bluetooth.requestDevice(options)
             .then(device => {
-                log = log + "Name: "+ device.name +"<br>";
-                log = log + "Id: "+ device.id +"<br>";
-                log = log + "Connected: "+ device.gatt.connected +"<br>";
+                log = log + "Name: "+ device.name +"/n";
+                log = log + "Id: "+ device.id +"/n";
+                log = log + "Connected: "+ device.gatt.connected +"/n";
             })
             .catch(error => {
-                log = log + "Argh! " + error +"<br>";
+                log = log + "Argh! " + error +"/n";
             });
 
         $objlog.innerText = log;  
