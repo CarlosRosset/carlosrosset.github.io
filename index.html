@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href=favicon.ico />
     <meta name=apple-mobile-web-app-capable content=yes />
     <meta name=apple-mobile-web-app-status-bar-style content=black />
-    <script src="js/script.js?v=9"></script>
+    <script src="js/script.js?v=24"></script>
     <noscript>
         <h1>Peço que entenda que sem o Javascript ativo teremos dificuldades em lhe atender bem!</h1>
     </noscript>
@@ -25,38 +25,58 @@
     <!-- <link href="no/i400/css/ionic.bundle.css" rel="stylesheet"> -->
     <!-- <script src="no/i400/dist/ionic.js"></script> -->
 
+    <style>
+        .hidden {display: none;}
+    </style>
+
 </head>
 
 <body>
 
     <ion-app>
 
-            <!-- Cabeçalho -->
-            <ion-header>
-                <ion-toolbar>
-                    <ion-buttons slot="start">
-                        <ion-menu-button menu="start">
-                            <!-- <img src="./../../assets/imgs/serquip-white.webp" alt="logo"> -->
-                        </ion-menu-button>
-                    </ion-buttons>
-                    <ion-title>Área de testes</ion-title>
-                </ion-toolbar>
-            </ion-header>
+        <!-- Cabeçalho -->
+        <ion-header>
+            <ion-toolbar color="primary" text-center>
+                <ion-buttons slot="start">
+                    <ion-menu-button menu="start">
+                        <!-- <img src="./../../assets/imgs/serquip-white.webp" alt="logo"> -->
+                    </ion-menu-button>
+                </ion-buttons>
+                <ion-title>Área de testes</ion-title>
+            </ion-toolbar>
+        </ion-header>
 
-            <!-- Corpo -->
-            <ion-content padding>
+        <!-- Corpo -->
+        <ion-content padding>
 
-                <h1>Bem Vindo a carlosrosset.com!</h1>
 
-                <ion-card id="card_lista" routerLink="/rota">
+            <ion-card-title text-center color="primary">Bem Vindo</ion-card-title>
+
+            <ion-card style="box-shadow: none; max-width: 340px; margin: auto">
+
+                <ion-item lines="none">
+                    <ion-button slot="start" onclick="escutar()">
+                        <ion-icon name="microphone"></ion-icon>
+                    </ion-button>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label id="nomeFalado"></ion-label>
+                </ion-item>
+
+                <ion-item id="acoes" lines="none" class="ion-margin-top hidden ">
+                    <ion-button slot="end" onclick="acessar()" class="hiddens">Acessar bluetooth</ion-button>
+                </ion-item>
+                <br>
+                <span id="unsupported" class="hidden" text-center></span>
+            </ion-card>
+
+            <!-- <ion-card id="card_lista" routerLink="/rota">
                     <ion-item text-center>
                         <ion-icon slot="start" name="bug" color="primary" onclick="forceResetApp();"></ion-icon>
                         <ion-card-title>Lista de testes</ion-card-title>
                     </ion-item>
-                    <!-- button  -->
-                    <!-- <ion-item href="./serquippwa/index.html">
-                        <ion-label>Abrir serquipe errada </ion-label>
-                </ion-item> -->
 
                     <ion-item href="./web-bluetooth-demo2/index.html">
                         <ion-label>Aplicação de terceiro - Bluetooh </ion-label>
@@ -78,25 +98,18 @@
                         Esteja certo que muita coisa vai dar <strong>ERRADO</strong> e talvez com muita sorte algo possa
                         dar certo.
                     </ion-card-content>
-                </ion-card>
+                </ion-card> -->
 
-                
-                <ion-item lines="none">  
-                    <a href="/pages/bluetooth.htm">                      
-                        <ion-button slot="end">Acessar área de trabalho bluetooth</ion-button>
-                    </a>
-                </ion-item>
-                
-            </ion-content>
+        </ion-content>
 
-            <!-- Rodapé -->
-            <ion-footer>
-                <ion-toolbar>
-                    <ion-title>
-                        <h6>Se veio aqui sabe o que fazer</h6>
-                    </ion-title>
-                </ion-toolbar>
-            </ion-footer>
+        <!-- Rodapé -->
+        <ion-footer>
+            <ion-toolbar>
+                <ion-title>
+                    <h6>Se veio aqui sabe o que fazer</h6>
+                </ion-title>
+            </ion-toolbar>
+        </ion-footer>
 
 
     </ion-app>
