@@ -100,10 +100,10 @@ function testarBluetooth() {
     $objlog.innerText = log;
     
     console.log('funcionou tudo');
-    console.log(filters);
-    console.log(filterService);
-    console.log(filterName);
-    console.log(filterNamePrefix);
-    console.log(options);
-    console.log(device)
+    console.log('filters' + filters);
+    console.log('filterService' + filterService);
+    console.log('filterName' + filterName);
+    console.log('filterNamePrefix' + filterNamePrefix);
+    console.log('options' + options);
+    console.log('device' + device)
 }
