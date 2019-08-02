@@ -43,7 +43,7 @@ function forceResetApp() {
     function testarBluetooth() {
         let filters = [];
 
-        let filterService = document.getElementById('service').value;
+       let filterService = document.getElementById('service').value;
         if (filterService.startsWith('0x')) {
             filterService = parseInt(filterService);
         }
@@ -68,15 +68,18 @@ function forceResetApp() {
             options.filters = filters;
         }
 
-        log('Requesting Bluetooth Device...');
-        log('with ' + JSON.stringify(options));
+        console.log('Requesting Bluetooth Device...');
+        console.log('with ' + JSON.stringify(options));
         navigator.bluetooth.requestDevice(options)
             .then(device => {
-                log('> Name:             ' + device.name);
-                log('> Id:               ' + device.id);
-                log('> Connected:        ' + device.gatt.connected);
+                console.log('> Name:             ' + device.name);
+                console.log('> Id:               ' + device.id);
+                console.log('> Connected:        ' + device.gatt.connected);
             })
             .catch(error => {
-                log('Argh! ' + error);
+                console.log('Argh! ' + error);
             });
+
+            
+           console.log('funcionou tudo 2');
     }
