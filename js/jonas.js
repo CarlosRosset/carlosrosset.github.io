@@ -1,10 +1,20 @@
-function testarBluetooth(){
-    let retorno = document.getElementById('retorno');
-    retorno.innerHTML = "valor inicial"
-    navigator.bluetooth.requestDevice({
-        acceptAllDevices: true,
-        optionalServices: ['battery_service']
-      })
-      .then(device => { retorno.innerHTML = 'Oi' + device })
-      .catch(error => { retorno.innerHTML = error; });
+function bluetooth() {
+
+    var retorno = document.getElementById('retorno');
+
+    let options = {};
+    options.acceptAllDevices = true;    
+       
+    navigator.bluetooth.requestDevice(options)
+        .then(device => {
+            retorno = 'device ', device;
+            retorno += "Name: " + device.name + "\n";
+            retorno += "Id: " + device.id + "\n";
+            retorno += "Connected: " + device.gatt.connected + "\n";
+        })
+        .catch(error => {
+            retorno += "Argh! " + error + "\n";
+        });
+
+    console.log('fim');
 }
