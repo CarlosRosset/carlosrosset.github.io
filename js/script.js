@@ -43,7 +43,7 @@ function forceResetApp() {
     function testarBluetooth() {
         let filters = [];
 
-       let filterService = document.getElementById('service').value;
+        let filterService = document.getElementById('service').value;
         if (filterService.startsWith('0x')) {
             filterService = parseInt(filterService);
         }
@@ -72,12 +72,12 @@ function forceResetApp() {
         console.log('with ' + JSON.stringify(options));
         navigator.bluetooth.requestDevice(options)
             .then(device => {
-                console.log('> Name:             ' + device.name);
-                console.log('> Id:               ' + device.id);
-                console.log('> Connected:        ' + device.gatt.connected);
+                document.getElementById('name').innerHTML = ('> Name:             ' + device.name);
+                document.getElementById('service').innerHTML = ('> Id:               ' + device.id);
+                document.getElementById('namePrefix').innerHTML = ('> Connected:        ' + device.gatt.connected);
             })
             .catch(error => {
-                console.log('Argh! ' + error);
+                document.getElementById('name').innerHTML = ('Argh! ' + error);
             });
 
             
