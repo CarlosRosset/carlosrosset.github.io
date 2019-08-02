@@ -17,7 +17,7 @@ function bluetooth() {
                     retorno.innerHTML = "Erro ao tentar conectar o " + device.name;
                 } else {
                     // esta conectado
-                    retorno.innerHTML = "Conseguiu conectar ao " + device.name;
+                    retorno.innerHTML = "Conseguiu conectar ao " + device.name + '\n'+ ' Esta conectado mesmo? '+ device.gatt.connected;
                 }
 
             } else {
