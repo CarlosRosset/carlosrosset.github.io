@@ -87,9 +87,6 @@ function testarBluetooth() {
     log = log + "Requesting Bluetooth Device... " + "\n";
     log = log + "With: " + JSON.stringify(options) + "\n";
 
-    console.log('stringOptions ', stringOptions);
-    console.log('deviceOptions ', deviceOptions);
-
     // let stringOptions = JSON.stringify(options);
     // let deviceOptions = JSON.stringify(device);
 
