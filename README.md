@@ -11,7 +11,8 @@
 
 
 ## Alguuns materiais de referência para ajudar no estudo
-
+ - https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md
+ 
  - https://pt.slideshare.net/alvarowolfx/webusb-e-webluetooth-conectando-seu-hardware-a-web
  - https://whatwebcando.today/
  - https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web

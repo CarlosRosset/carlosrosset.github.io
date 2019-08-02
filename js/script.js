@@ -14,10 +14,12 @@ function teste_01() {
     if (!('bluetooth' in navigator)) {
         $target.innerText = 'API Bluetooth - SEM Suporte.';
         return;
+    } else {
+        $target.innerText = 'API Bluetooth - COM Suporte.';
+        return; 
     }
     // Se não tem suporte jamais chegará neste ponto defido ao "return"
-
-    navigator.bluetooth.requestDevice();
+    // navigator.bluetooth.requestDevice();
 }
 
 function teste_02() {
@@ -40,23 +42,3 @@ function forceResetApp() {
 
 }
 
-function testarBluetooth() {
-
-    console.log('função funcionando');
-
-    let options = {};
-    options.acceptAllDevices = true;    
-       
-    navigator.bluetooth.requestDevice(options)
-        .then(device => {
-            console.log('device ', device);
-            log = log + "Name: " + device.name + "\n";
-            log = log + "Id: " + device.id + "\n";
-            log = log + "Connected: " + device.gatt.connected + "\n";
-        })
-        .catch(error => {
-            log = log + "Argh! " + error + "\n";
-        });
-
-    console.log('fim');
-}

@@ -1,6 +1,9 @@
 function bluetooth() {
 
     var retorno = document.getElementById('retorno');
+    var deviceName = document.getElementById('deviceName');
+    var deviceId = document.getElementById('deviceId');
+    var status = false
 
     let options = {};
     options.acceptAllDevices = true;  
@@ -11,6 +14,9 @@ function bluetooth() {
             if (!isConectado){
                 // tentar conectar
                 retorno.innerHTML = 'Tentar conectar: ' + device.name;
+                deviceId.innerHTML = device.id;
+                deviceName.innerHTML = device.name;
+                status = device.gatt.connect;
 
                 if (!device.gatt.connect()) {
                     // Erro ao tentar conectar 
