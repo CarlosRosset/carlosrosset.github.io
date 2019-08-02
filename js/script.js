@@ -100,6 +100,7 @@ function acessar(nome) {
     if(nome === 'Bruno') {
         document.getElementById('nomeFalado').innerHTML = nome; 
         document.getElementById('acoes').classList.remove('hidden');
+        window.open('/pages/bluetooth.htm', '_self');
     } else {
         fale('Desculpa, você não é quem eu espero!');
         alert('Desculpa, você não é quem eu espero!');
