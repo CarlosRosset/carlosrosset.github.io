@@ -2,6 +2,14 @@
 # carlosrosset.github.io
 ---
 
+* Ative: 
+ - chrome://flags/#enable-experimental-web-platform-features
+ - chrome://flags/#enable-webnfc
+ - https://devdactic.com/ionic-4-offline-mode/
+ - http://tamerayd.in/ngToast/
+ - https://getbootstrap.com/docs/4.3/components/alerts/
+
+
 ## Alguuns materiais de referência para ajudar no estudo
 
  - https://pt.slideshare.net/alvarowolfx/webusb-e-webluetooth-conectando-seu-hardware-a-web
