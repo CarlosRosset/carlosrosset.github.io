@@ -69,7 +69,7 @@ function forceResetApp() {
         }
 
         var $objlog = document.getElementById('log');
-        let log = '';
+        let log;
         
 
         log = log + "Requesting Bluetooth Device... " + "<br>";
