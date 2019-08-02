@@ -10,7 +10,16 @@ function bluetooth() {
             const isConectado = device.gatt.connected;
             if (!isConectado){
                 // tentar conectar
-                retorno.innerHTML = 'Tentar conectar';
+                retorno.innerHTML = 'Tentar conectar: ' + device.name;
+
+                if (!device.gatt.connect()) {
+                    // Erro ao tentar conectar 
+                    retorno.innerHTML = "Erro ao tentar conectar o " + device.name;
+                } else {
+                    // esta conectado
+                    retorno.innerHTML = "Conseguiu conectar ao " + device.name;
+                }
+
             } else {
                 // Esta já conectado
                 retorno.innerHTML = 'Já conectado';
