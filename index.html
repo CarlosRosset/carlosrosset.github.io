@@ -26,7 +26,24 @@
     <!-- <script src="no/i400/dist/ionic.js"></script> -->
 
     <style>
-        .hidden {display: none;}
+        .hidden {
+            display: none;
+        }
+
+        ion-content {
+            --background: none;
+            background: #4e8ef7 url('/img/pattern.png') repeat center center !important;
+            background-image: url('/img/pattern.png') !important;
+            background-position-x: center !important;
+            background-position-y: center !important;
+            background-size: initial !important;
+            /* background-repeat-x: repeat !important;
+            background-repeat-y: repeat !important; */
+            background-attachment: initial !important;
+            background-origin: initial !important;
+            background-clip: initial !important;
+            background-color: rgb(78, 142, 247) !important;
+        }
     </style>
 
 </head>
@@ -43,15 +60,15 @@
                         <!-- <img src="./../../assets/imgs/serquip-white.webp" alt="logo"> -->
                     </ion-menu-button>
                 </ion-buttons>
-                <ion-title>Área de testes</ion-title>
+                <ion-title style="text-shadow: 1px 1px 2px #ccc;">Área de testes</ion-title>
             </ion-toolbar>
         </ion-header>
 
         <!-- Corpo -->
-        <ion-content padding>
+        <ion-content padding >
 
 
-            <ion-card-title text-center color="primary">Bem Vindo</ion-card-title>
+            <ion-card-title text-center style="color: bisque">Bem Vindo !</ion-card-title>
 
             <ion-card style="box-shadow: none; max-width: 340px; margin: auto">
 
@@ -104,13 +121,12 @@
 
         <!-- Rodapé -->
         <ion-footer>
-            <ion-toolbar>
+            <ion-toolbar color="primary" >
                 <ion-title>
                     <h6>Se veio aqui sabe o que fazer</h6>
                 </ion-title>
             </ion-toolbar>
         </ion-footer>
-
 
     </ion-app>
 
