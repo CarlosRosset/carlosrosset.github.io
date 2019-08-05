@@ -44,6 +44,11 @@
             background-clip: initial !important;
             background-color: rgb(78, 142, 247) !important;
         }
+
+        .item-native {
+            --border-radius: 1em !important;
+            border-radius: 1em !important;
+        }
     </style>
 
 </head>
@@ -73,20 +78,22 @@
                     <ion-card-title text-center style="color: bisque">Bem Vindo !</ion-card-title>
                 </ion-card-header>
                 <ion-card-content>
-                    <ion-item lines="none">
+
+                    <ion-item lines="none" style="border-radius: 1em;">
                         <ion-button slot="start" onclick="escutar()">
                             <ion-icon name="microphone"></ion-icon>
                         </ion-button>
-                    </ion-item>
-
-                    <ion-item>
                         <ion-label id="nomeFalado"></ion-label>
+                        <ion-button slot="end" onclick="forceResetApp()" color="danger">
+                            <ion-icon name="bug"></ion-icon>
+                        </ion-button>
                     </ion-item>
 
                     <ion-item id="acoes" lines="none" class="ion-margin-top hidden ">
                         <ion-button slot="end" href="/pages/bluetooth.htm" class="hiddens">Acessar bluetooth
                         </ion-button>
                     </ion-item>
+
                     <br>
                     <span id="unsupported" class="hidden" text-center></span>
                 </ion-card-content>
