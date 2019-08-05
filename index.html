@@ -32,8 +32,8 @@
 
         ion-content {
             --background: none;
-            background: #4e8ef7 url('/img/pattern.png') repeat center center !important;
-            background-image: url('/img/pattern.png') !important;
+            --background: #4e8ef7 url('/img/pattern.png') repeat center center !important;
+            --background-image: url('/img/pattern.png') !important;
             background-position-x: center !important;
             background-position-y: center !important;
             background-size: initial !important;
@@ -45,9 +45,9 @@
             background-color: rgb(78, 142, 247) !important;
         }
 
-        .item-native {
+        /* .item-native {
             border-radius: 1em !important;
-        }
+        } */
         /* #boxentrada {
             font-size: 500%;
         } */
@@ -82,7 +82,7 @@
                 </ion-card-header>
                 <ion-card-content>
 
-                    <ion-item id="boxentrada" lines="none" style="border-radius: 1em;">
+                    <ion-item id="boxentrada" lines="none" style="--border-radius: 1em;">
                         <ion-button slot="start" onclick="escutar()">
                             <ion-icon name="microphone"></ion-icon>
                         </ion-button>
