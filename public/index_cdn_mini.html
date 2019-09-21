@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang=pt-BR dir=ltr>
+
+<head>
+    <!-- <link rel="manifest" href="/manifest.json"> -->
+    <meta charset=utf-8 />
+    <title>Testar FireBase</title>
+    <base href="/" />
+    <meta name=Description content="Teste firebase">
+    <meta name=viewport content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
+    <meta name=format-detection content="telephone=no" />
+    <meta name=msapplication-tap-highlight content=no />
+    <meta name=theme-color content="#1972d2">
+    <link rel="shortcut icon" href=favicon.ico />
+    <meta name=apple-mobile-web-app-capable content=yes />
+    <meta name=apple-mobile-web-app-status-bar-style content=black />
+    <!-- <script src="js/script.js?v=26"></script> -->
+    
+    <!-- IONIC (I) -->
+    <!-- Para evitar instalação: https://unpkg.com/browse/@ionic/core@4.0.0/README.md -->
+    <link href="https://unpkg.com/@ionic/core@4.0.0/css/ionic.bundle.css" rel="stylesheet">
+    <script src="https://unpkg.com/@ionic/core@4.0.0/dist/ionic.js"></script>
+    <!-- Caso deseje ser 100% off -->
+    <!-- IONIC (F) -->
+
+</head>
+
+<body>
+
+    
+    <!-- Firebase (I) -->
+    <!-- Obrigatório - Inicializa os SDKs do firebase -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase.js"></script> -->
+    
+    <!-- SDK que permite a utilização da authenticação do firebase -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <!-- SDK que permite a utilização do firestore -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script> -->
+    <!-- SDK que permite a utilização das functions -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-functions.js"></script> -->
+    <!-- SDK que permite a utilização das messaging -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-messaging.js"></script> -->
+    <!-- SDK que permite a utilização do storage -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-storage.js"></script> -->
+    <!-- SDK que permite a utilização do database -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+    <!-- Inicializa o firebase -->
+    <!-- <script defer src="js/init-firebase.js"></script> -->
+    <!-- Firebase (F) -->
+
+<script>
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCQnq12UWEk5yDP4LDyLKYLzcQvrbxfihM",
+    authDomain: "rajus-c8a95.firebaseapp.com",
+    databaseURL: "https://rajus-c8a95.firebaseio.com",
+    projectId: "rajus-c8a95",
+    storageBucket: "rajus-c8a95.appspot.com",
+    messagingSenderId: "15843682947",
+    appId: "1:15843682947:web:9f36ecb060b3fb07d709b6"
+};
+
+    document.addEventListener('DOMContentLoaded', function() {
+        try {
+          // Initialize Firebase
+          let app = firebase.initializeApp(firebaseConfig);
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          console.log('CDN Firebase - ON : ',`Firebase SDK iniciado com ${features.join(', ')}`);
+          console.log('Versão => ',firebase.SDK_VERSION);
+          // console.log(firebase.app().name);
+          // console.log(firebase);
+        } catch (e) {
+          console.error(e);
+        }
+    });
+
+</script>
+
+teste
+
+</body>

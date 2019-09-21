@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang=pt-BR dir=ltr>
+
+<head>
+    <!-- <link rel="manifest" href="/manifest.json"> -->
+    <meta charset=utf-8 />
+    <title>Testar FireBase</title>
+    <base href="/" />
+    <meta name=Description content="Teste firebase">
+    <meta name=viewport content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
+    <meta name=format-detection content="telephone=no" />
+    <meta name=msapplication-tap-highlight content=no />
+    <meta name=theme-color content="#1972d2">
+    <link rel="shortcut icon" href=favicon.ico />
+    <meta name=apple-mobile-web-app-capable content=yes />
+    <meta name=apple-mobile-web-app-status-bar-style content=black />
+    <!-- <script src="js/script.js?v=26"></script> -->
+    
+    <!-- IONIC (I) -->
+    <!-- Para evitar instalação: https://unpkg.com/browse/@ionic/core@4.0.0/README.md -->
+    <link href="https://unpkg.com/@ionic/core@4.0.0/css/ionic.bundle.css" rel="stylesheet">
+    <script src="https://unpkg.com/@ionic/core@4.0.0/dist/ionic.js"></script>
+    <!-- Caso deseje ser 100% off -->
+    <!-- IONIC (F) -->
+
+    <!-- Firebase (I) -->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.6.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.6.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.6.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.6.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.6.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- Firebase (F) -->
+
+</head>
+
+<body>
+
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          console.log('Firebase - ON : ',`Firebase SDK iniciado com ${features.join(', ')}`);
+          console.log('Versão => ',firebase.SDK_VERSION);
+          // console.log(firebase.app().name);
+          // console.log(firebase);
+        } catch (e) {
+          console.error(e);
+        }
+    });
+
+</script>
+
+  teste
+
+</body>

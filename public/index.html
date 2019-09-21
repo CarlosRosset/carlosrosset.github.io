@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang=pt-BR dir=ltr ng-app="rajus">
+
+<head>
+    <!-- <link rel="manifest" href="/manifest.json"> -->
+    <meta charset=utf-8 />
+    <title>Testar FireBase</title>
+    <base href="/" />
+    <meta name=Description content="Teste firebase">
+    <meta name=viewport content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
+    <meta name=format-detection content="telephone=no" />
+    <meta name=msapplication-tap-highlight content=no />
+    <meta name=theme-color content="#1972d2">
+    <link rel="shortcut icon" href=favicon.ico />
+    <meta name=apple-mobile-web-app-capable content=yes />
+    <meta name=apple-mobile-web-app-status-bar-style content=black />
+    <!-- <script src="js/script.js?v=26"></script> -->
+
+    <!-- AngularJS (I) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <!-- AngularJS (F) -->
+
+    <!-- IONIC (I) -->
+    <!-- Para evitar instalação: https://unpkg.com/browse/@ionic/core@4.0.0/README.md -->
+    <link href="https://unpkg.com/@ionic/core@4.0.0/css/ionic.bundle.css" rel="stylesheet">
+    <script src="https://unpkg.com/@ionic/core@4.0.0/dist/ionic.js"></script>
+    <!-- Caso deseje ser 100% off -->
+    <!-- IONIC (F) -->
+
+    <!-- Firebase (I) -->
+    <!-- Obrigatório - Inicializa os SDKs do firebase -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <!-- SDK que permite a utilização da authenticação do firebase -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <!-- SDK que permite a utilização do firestore -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script> -->
+    <!-- SDK que permite a utilização das functions -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-functions.js"></script> -->
+    <!-- SDK que permite a utilização das messaging -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-messaging.js"></script> -->
+    <!-- SDK que permite a utilização do storage -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-storage.js"></script> -->
+    <!-- SDK que permite a utilização do database -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+    <!-- Inicializa o firebase -->
+    <!-- <script defer src="js/init-firebase.js"></script> -->
+    <!-- Firebase (F) -->
+
+    <script>
+        let user = [];
+
+    </script>
+
+    <script src="firebase/app.js"></script>
+    <script src="firebase/authentication.js"></script>
+    <script src="angular/controller.js"></script>
+
+    <style>
+        ion-item {
+            --background: none;
+        }
+    </style>
+
+</head>
+
+<body ng-controller="body-controller as body">
+
+    <ion-app>
+        <!-- Cabeçalho -->
+        <ion-header>
+            <ion-toolbar color="primary" text-center>
+                <ion-title style="text-shadow: 1px 1px 2px #ccc;">Teste de Autenticação {{teste}}</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <!-- Cabeçalho -->
+
+        <!-- Corpo -->
+        <ion-content padding>
+            <!-- 
+                <div>
+                        <label>Name:</label>
+                        <input type="text" ng-model="user.login" placeholder="Enter a name here">
+                        <hr>
+                        <h1>Hello {{user.login}}!</h1>
+                      </div> -->
+
+
+            <ion-card color="secondary" style="box-shadow: none; max-width: 340px; margin: auto">
+                <ion-card-header>
+                    <ion-card-title text-center style="color: rgb(128, 115, 99)">Bem Vindo !</ion-card-title>
+
+                    <ion-avatar ng-if="estaLogado">
+                        <img id="login_avatar" src="">
+                    </ion-avatar>
+
+                    <ion-item>
+                        <ion-label>
+                            <h1>Bem vindo ( {{vteste}} ) </h1>
+                            <ion-label id="name_user"></ion-label>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-card-subtitle style="color: rgb(128, 115, 99)">Esteja certo que muita coisa vai dar
+                        <strong>ERRADO</strong> e talvez com muita sorte algo possa dar certo.</ion-card-subtitle>
+                </ion-card-header>
+                <ion-card-content>
+
+                    <ion-item>
+                        <ion-label position="stacked">Email</ion-label>
+                        <ion-input type="email" name="email" id="input_login_email"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label position="stacked">Password</ion-label>
+                        <ion-input type="password" name="password" id="input_login_password"></ion-input>
+                    </ion-item>
+
+                    <ion-button expand="full" color="primary" onclick="logar()">Logar</ion-button>
+
+                    <ion-button expand="full" color="primary" onclick="logarWithGoogle()">Logar com google</ion-button>
+
+                    <ion-button expand="full" color="tertiary" onclick="cadastrar()">Cadastrar</ion-button>
+
+                    <ion-button expand="full" color="danger" onclick="deslogar()">Deslogar</ion-button>
+
+                    <ion-button expand="full" color="danger" data-ng-click="estaLogado()">Está logado?</ion-button>
+
+
+                        <input type="text" id="nomeUsuario"></input>
+                        <ion-input type="number" id="cpfUsuario"></ion-input>
+
+                        <ion-button expand="full" color="danger" onclick="cadastrarPaciente()">Cadastrar Paciente</ion-button>
+
+                </ion-card-content>
+            </ion-card>
+
+        </ion-content>
+        <!-- Corpo -->
+
+        <!-- Rodapé -->
+        <ion-footer>
+            <ion-toolbar color="primary">
+                <ion-title>
+                    <h6>Se veio aqui sabe o que fazer</h6>
+                </ion-title>
+            </ion-toolbar>
+        </ion-footer>
+        <!-- Rodapé -->
+
+    </ion-app>
+
+</body>
