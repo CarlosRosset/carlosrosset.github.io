@@ -1,124 +1,131 @@
 <!DOCTYPE html>
-<html lang=pt-BR dir=ltr>
-
-<head>
-    <link rel="manifest" href="/manifest.json">
-    <meta charset=utf-8 />
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <link rel="manifest" href="/manifest.json" />
+    <meta charset="utf-8" />
     <title>Carlos Rosset</title>
     <base href="/" />
-    <meta name=Description content="SITE Pessoal Carlos Rosset">
-    <meta name=viewport content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
-    <meta name=format-detection content="telephone=no" />
-    <meta name=msapplication-tap-highlight content=no />
-    <meta name=theme-color content="#1976d2">
-    <link rel="shortcut icon" href=favicon.ico />
-    <meta name=apple-mobile-web-app-capable content=yes />
-    <meta name=apple-mobile-web-app-status-bar-style content=black />
+    <meta name="Description" content="SITE Pessoal Carlos Rosset" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="theme-color" content="#1976d2" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <script src="js/script.js?v=26"></script>
     <noscript>
-        <h1>Peço que entenda que sem o Javascript ativo teremos dificuldades em lhe atender bem!</h1>
+      <h1>
+        Peço que entenda que sem o Javascript ativo teremos dificuldades em lhe
+        atender bem!
+      </h1>
     </noscript>
     <!-- Para evitar instalação: https://unpkg.com/browse/@ionic/core@4.0.0/README.md -->
     <!-- <link href="https://unpkg.com/@ionic/core@4.0.0/css/ionic.bundle.css" rel="stylesheet"> -->
     <!-- <script src="https://unpkg.com/@ionic/core@4.0.0/dist/ionic.js"></script> -->
     <!-- Caso deseje ser 100% off -->
-    <link href="no/i400/css/ionic.bundle.css" rel="stylesheet">
+    <link href="no/i400/css/ionic.bundle.css" rel="stylesheet" />
     <script src="no/i400/dist/ionic.js"></script>
 
     <style>
-        .hidden {
-            display: none;
-        }
+      .hidden {
+        display: none;
+      }
 
-        ion-content {
-            --background: none;
-            --background: #4e8ef7 url('/img/pattern.png') repeat center center !important;
-            --background-image: url('/img/pattern.png') !important;
-            background-position-x: center !important;
-            background-position-y: center !important;
-            background-size: initial !important;
-            /* background-repeat-x: repeat !important;
+      ion-content {
+        --background: none;
+        --background: #4e8ef7 url("/img/pattern.png") repeat center center !important;
+        --background-image: url("/img/pattern.png") !important;
+        background-position-x: center !important;
+        background-position-y: center !important;
+        background-size: initial !important;
+        /* background-repeat-x: repeat !important;
             background-repeat-y: repeat !important; */
-            background-attachment: initial !important;
-            background-origin: initial !important;
-            background-clip: initial !important;
-            background-color: rgb(78, 142, 247) !important;
-        }
+        background-attachment: initial !important;
+        background-origin: initial !important;
+        background-clip: initial !important;
+        background-color: rgb(78, 142, 247) !important;
+      }
 
-        #boxentrada {
-            --border-radius: 1em;
-        }
+      #boxentrada {
+        --border-radius: 1em;
+      }
     </style>
     <script>
-        // Check that service workers are supported
-        if ('serviceWorker' in navigator) {
-            // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js');
-            });
-        }
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
     </script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <ion-app>
+      <!-- Cabeçalho -->
+      <ion-header>
+        <ion-toolbar color="primary" text-center>
+          <ion-buttons slot="start">
+            <ion-menu-button menu="start">
+              <!-- <img src="./../../assets/imgs/serquip-white.webp" alt="logo"> -->
+            </ion-menu-button>
+          </ion-buttons>
+          <ion-title style="text-shadow: 1px 1px 2px #ccc"
+            >Área para meus testes</ion-title
+          >
+        </ion-toolbar>
+      </ion-header>
 
-        <!-- Cabeçalho -->
-        <ion-header>
-            <ion-toolbar color="primary" text-center>
-                <ion-buttons slot="start">
-                    <ion-menu-button menu="start">
-                        <!-- <img src="./../../assets/imgs/serquip-white.webp" alt="logo"> -->
-                    </ion-menu-button>
-                </ion-buttons>
-                <ion-title style="text-shadow: 1px 1px 2px #ccc;">Área para meus testes</ion-title>
-            </ion-toolbar>
-        </ion-header>
+      <!-- Corpo -->
+      <ion-content padding>
+        <ion-card style="box-shadow: none; max-width: 340px; margin: auto">
+          <ion-card-header>
+            <ion-card-title text-center style="color: bisque"
+              >Bem Vindo !</ion-card-title
+            >
+            <ion-card-subtitle style="color: bisque"
+              >Esteja certo que muita coisa vai dar <strong>ERRADO</strong> e
+              talvez com muita sorte algo possa dar certo. Existe uma grande
+              chance de você esta no lugar errado ou ter chegado aqui sem
+              convite mas se veio pelos meios certos sabe o que fazer :D
+            </ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item id="boxentrada" lines="none">
+              <ion-button slot="start" onclick="escutar()">
+                <ion-icon name="ios-microphone"></ion-icon>
+              </ion-button>
+              <ion-label id="nomeFalado"></ion-label>
+              <ion-button slot="end" onclick="forceResetApp()" color="danger">
+                <ion-icon name="ios-bug"></ion-icon>
+              </ion-button>
+            </ion-item>
 
-        <!-- Corpo -->
-        <ion-content padding>
+            <ion-item id="acoes" lines="none" class="ion-margin-top hidden">
+              <ion-button slot="end" href="/pages/bluetooth.htm" class="hiddens"
+                >Acessar bluetooth
+              </ion-button>
+            </ion-item>
 
-            <ion-card style="box-shadow: none; max-width: 340px; margin: auto">
-                <ion-card-header>
-                    <ion-card-title text-center style="color: bisque">Bem Vindo !</ion-card-title>
-                    <ion-card-subtitle style="color: bisque">Esteja certo que muita coisa vai dar
-                        <strong>ERRADO</strong> e talvez com muita sorte algo possa dar certo.</ion-card-subtitle>
-                </ion-card-header>
-                <ion-card-content>
+            <br />
+            <span id="unsupported" class="hidden" text-center></span>
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
 
-                    <ion-item id="boxentrada" lines="none">
-                        <ion-button slot="start" onclick="escutar()">
-                            <ion-icon name="ios-microphone"></ion-icon>
-                        </ion-button>
-                        <ion-label id="nomeFalado"></ion-label>
-                        <ion-button slot="end" onclick="forceResetApp()" color="danger">
-                            <ion-icon name="ios-bug"></ion-icon>
-                        </ion-button>
-                    </ion-item>
-
-                    <ion-item id="acoes" lines="none" class="ion-margin-top hidden ">
-                        <ion-button slot="end" href="/pages/bluetooth.htm" class="hiddens">Acessar bluetooth
-                        </ion-button>
-                    </ion-item>
-
-                    <br>
-                    <span id="unsupported" class="hidden" text-center></span>
-
-                </ion-card-content>
-            </ion-card>
-
-        </ion-content>
-
-        <!-- Rodapé -->
-        <ion-footer>
-            <ion-toolbar color="primary">
-                <ion-title>
-                    <h6>Se veio aqui sabe o que fazer</h6>
-                </ion-title>
-            </ion-toolbar>
-        </ion-footer>
-
+      <!-- Rodapé -->
+      <ion-footer>
+        <ion-toolbar color="primary">
+          <ion-title>
+            <h6>Se veio aqui sabe o que fazer</h6>
+          </ion-title>
+        </ion-toolbar>
+      </ion-footer>
     </ion-app>
-
-</body>
+  </body>
+</html>
