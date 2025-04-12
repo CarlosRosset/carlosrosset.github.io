@@ -37,14 +37,14 @@ if (workbox) {
   );
 
   workbox.precaching.precacheAndRoute([
-    '/js/script.js',
-    '/no/i400/css/ionic.bundle.css',
+    'js/script.js',
+    'no/i400/css/ionic.bundle.css',
     'no/i400/dist/ionic.js',
     'no/i400/dist/ionic.js',
     'no/i400/dist/ionic/svg/ios-bug.svg',
     'no/i400/dist/ionic/svg/md-bug.svg',
     'no/i400/dist/ionic/svg/ios-microphone.svg',
-    { url: '/index.html', revision: '383676' },
+    { url: 'index.html', revision: '383676' },
   ]);
 
 } else {

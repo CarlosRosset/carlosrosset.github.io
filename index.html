@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
   <head>
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="manifest.json" />
     <meta charset="utf-8" />
     <title>Carlos Rosset</title>
-    <base href="/" />
+    <base href="./" />
     <meta name="Description" content="SITE Pessoal Carlos Rosset" />
     <meta
       name="viewport"
@@ -37,8 +37,8 @@
 
       ion-content {
         --background: none;
-        --background: #4e8ef7 url("/img/pattern.png") repeat center center !important;
-        --background-image: url("/img/pattern.png") !important;
+        --background: #4e8ef7 url("img/pattern.png") repeat center center !important;
+        --background-image: url("img/pattern.png") !important;
         background-position-x: center !important;
         background-position-y: center !important;
         background-size: initial !important;
@@ -59,7 +59,7 @@
       if ("serviceWorker" in navigator) {
         // Use the window load event to keep the page load performant
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/service-worker.js");
+          navigator.serviceWorker.register("service-worker.js");
         });
       }
     </script>
@@ -107,7 +107,7 @@
             </ion-item>
 
             <ion-item id="acoes" lines="none" class="ion-margin-top hidden">
-              <ion-button slot="end" href="/pages/bluetooth.htm" class="hiddens"
+              <ion-button slot="end" href="pages/bluetooth.htm" class="hiddens"
                 >Acessar bluetooth
               </ion-button>
             </ion-item>
